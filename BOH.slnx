@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BOH.csproj" />
+  <Project Path="BOH.Tests/BOH.Tests.csproj" />
+</Solution>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Single source of the version: shown as "psz // v{Version}" in the footer and in the About card. -->
+    <Version>1.0.0</Version>
+    <ApplicationIcon>Assets\BOHicon.ico</ApplicationIcon>
+    <!-- Program.Main handles the silent run-backup switch without starting WPF. -->
+    <StartupObject>BOH.Program</StartupObject>
+    <!-- The test project lives in a sub folder; keep its files out of the app. -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);BOH.Tests\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\BOHicon.ico" />
+    <Resource Include="Assets\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="TaskScheduler" Version="2.12.2" />
+  </ItemGroup>
+
+</Project>

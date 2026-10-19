@@ -1,0 +1,18 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Build and test
+        run: dotnet test BOH.slnx -c Release
+      - name: Publish single-file exe
+        run: dotnet publish BOH.csproj -p:PublishProfile=win-x64

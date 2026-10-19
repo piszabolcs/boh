@@ -1,0 +1,32 @@
+## .NET / Visual Studio
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.csproj.user
+*.pubxml.user
+*.suo
+TestResults/
+
+# Publish output (old publish profiles wrote "BOH App V0.x" folders next to the project)
+publish/
+*.publish.xml
+BOH App V0.*/
+
+# Runtime files written by the app (portable mode keeps them next to BOH.exe)
+boh_config.json
+boh_config.json.bad-*
+boh_log.txt
+*.log
+
+# Raw 1024 px logo master (derived, smaller assets are committed)
+Assets/icon.png
+
+# Rider / VS Code
+.idea/
+*.DotSettings.user
+
+# OS
+Thumbs.db
+.DS_Store
+build_out.txt
